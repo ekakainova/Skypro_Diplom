@@ -1,0 +1,1 @@
+{"total":2,"items":[{"uid":"d99881e9e97739e6218c1221e65f4302","name":"UI-тесты на проверку сайта \"Кинопоиск\"","statistic":{"failed":0,"broken":0,"skipped":0,"passed":5,"unknown":0,"total":5}},{"uid":"5dfbda8bc5eb0bef69770965158067e6","name":"API-тесты на проверку сайта \"Кинопоиск\"","statistic":{"failed":0,"broken":0,"skipped":1,"passed":4,"unknown":0,"total":5}}]}
