@@ -11,6 +11,7 @@ from Pages.Auth_Page import AuthPage
 @allure.title('''Переход с главной страницы сайта
               в категорию "Сериалы"''')
 @pytest.mark.positive_test
+@pytest.mark.ui_positive_test
 def test_tv_series_category(driver):
 
     main_page = MainPage(driver)
@@ -32,6 +33,7 @@ def test_tv_series_category(driver):
 @allure.suite('''UI-тесты на проверку сайта "Кинопоиск"''')
 @allure.title("Поиск конкретного фильма/сериала")
 @pytest.mark.positive_test
+@pytest.mark.ui_positive_test
 def test_search_movie(driver):
 
     main_page = MainPage(driver)
@@ -55,6 +57,7 @@ def test_search_movie(driver):
 @allure.title("Поиск фильма определённого жанра")
 @allure.description("Поиск фильмов с параметром жанра 'комедия'")
 @pytest.mark.positive_test
+@pytest.mark.ui_positive_test
 def test_genre_filter(driver):
 
     main_page = MainPage(driver)
@@ -81,6 +84,7 @@ def test_genre_filter(driver):
 @allure.title('''Поиск при выборе противоречащих
               друг другу фильтров''')
 @pytest.mark.negative_test
+@pytest.mark.ui_negative_test
 def test_conflicting_filters(driver):
 
     main_page = MainPage(driver)
@@ -106,6 +110,7 @@ def test_conflicting_filters(driver):
 @allure.suite('''UI-тесты на проверку сайта "Кинопоиск"''')
 @allure.title("Проверка входа в личный кабинет с пустым полем пароля")
 @pytest.mark.negative_test
+@pytest.mark.ui_negative_test
 def test_empty_password_field(driver):
 
     main_page = MainPage(driver)

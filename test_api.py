@@ -5,6 +5,7 @@ import allure
 @allure.suite('''API-тесты на проверку сайта "Кинопоиск"''')
 @allure.title("Поиск фильма по названию на кириллице")
 @pytest.mark.positive_test
+@pytest.mark.api_positive_test
 def test_cyrillic_movie_search(api):
 
     movie_name = 'Годзилла'
@@ -24,6 +25,7 @@ def test_cyrillic_movie_search(api):
 @allure.suite('''API-тесты на проверку сайта "Кинопоиск"''')
 @allure.title("Поиск фильма по id")
 @pytest.mark.positive_test
+@pytest.mark.api_positive_test
 def test_search_movie_by_id(api):
 
     movie_name = 'Годзилла'
@@ -47,6 +49,7 @@ def test_search_movie_by_id(api):
 @allure.title("Поиск фильмов определенного жанра")
 @allure.description("Поиск фильмов с параметром жанра 'комедия'")
 @pytest.mark.positive_test
+@pytest.mark.api_positive_test
 def test_search_comedies(api):
 
     movie_type = 'movie'
@@ -69,6 +72,7 @@ def test_search_comedies(api):
                     а список различных фильмов/сериалов''')
 @pytest.mark.xfail
 @pytest.mark.negative_test
+@pytest.mark.api_negative_test
 def test_movie_search_with_whitespaces(api):
 
     movie_name = '      '
@@ -87,6 +91,7 @@ def test_movie_search_with_whitespaces(api):
 @allure.title('''Поиск при выборе противоречащих
               друг другу фильтров''')
 @pytest.mark.negative_test
+@pytest.mark.api_negative_test
 def test_search_with_wrong_filters(api):
 
     movie_type = 'movie'
